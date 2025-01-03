@@ -6,7 +6,7 @@ import Home from './components/Home';
 import RepositoryPage from './components/RepositoryPage';
 import Explore from './components/Explore';
 import About from './components/About';
-import { Contact } from 'lucide-react';
+import Contact from './components/Contact';
 
 const App = () => (
   <Router>
@@ -15,7 +15,7 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/explore" element={<Explore />} />
       <Route path="/about" element={<About />} />
-      <Route path="/explore" element={<Contact />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/repository/:owner/:repo" element={<RepositoryPage />} />
     </Routes>
   </Router>
