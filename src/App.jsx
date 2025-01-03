@@ -4,15 +4,19 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import RepositoryPage from './components/RepositoryPage';
-import UserPage from './components/UserPage';
+import Explore from './components/Explore';
+import About from './components/About';
+import { Contact } from 'lucide-react';
 
 const App = () => (
   <Router>
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/explore" element={<Explore />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/explore" element={<Contact />} />
       <Route path="/repository/:owner/:repo" element={<RepositoryPage />} />
-      <Route path="/user/:username" element={<UserPage />} />
     </Routes>
   </Router>
 );
